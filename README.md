@@ -1,4 +1,4 @@
-# gol-IA-t
+# AI Chat (gol-IA-t)
 
 Chat with LLMs that run **100% in the browser** — no server, no API keys.
 Models are downloaded once, cached locally and run on the GPU via WebGPU.
@@ -58,5 +58,6 @@ Models are downloaded once, cached locally and run on the GPU via WebGPU.
 | `pnpm dev`     | Start dev server at `localhost:3000`                    |
 | `pnpm build`   | Build static site into `./out/`, deployable on any host |
 | `pnpm lint`    | Run ESLint                                              |
+| `pnpm test`    | Run Vitest                                              |
 
 > You can also use `npm` or `bun` if you prefer.
