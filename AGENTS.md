@@ -16,7 +16,7 @@ This file provides guidance to coding agents when working with code in this repo
 
 **gol-IA-t** is a chat UI for LLMs that run entirely in the browser: WebLLM (`@mlc-ai/web-llm`) on
 WebGPU, no backend, no API keys. Next.js 16 static export + React 19 + Tailwind CSS 4 + shadcn/ui.
-All visible content is in Spanish. There are no tests; ESLint is the only check.
+All visible content is in Spanish. Vitest covers `src/lib` and `use-chat` (`*.test.ts`, engine and store mocked; hook tests use jsdom + `renderHook`); components are untested.
 
 ## Commands
 
@@ -26,6 +26,7 @@ pnpm is the package manager (`pnpm-lock.yaml` is committed; npm/bun also work).
 - `pnpm dev` — dev server at localhost:3000
 - `pnpm build` — static export to `./out/`
 - `pnpm lint` — ESLint (`eslint-config-next` core-web-vitals + typescript)
+- `pnpm test` — Vitest (`vitest run`; `vitest.config.mts` only maps the `@/` alias, default env is node)
 
 `pnpm-workspace.yaml` sets `minimumReleaseAge: 1440` (no package published less than a day ago)
 and blocks build scripts for `sharp` / `unrs-resolver` — keep both when adding dependencies.
