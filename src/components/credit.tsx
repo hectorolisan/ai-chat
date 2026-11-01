@@ -1,3 +1,5 @@
+import { CodeXml } from "lucide-react";
+
 // Pixel heart with the Canary Islands flag, same as hectorolisan's other projects.
 function Heart() {
   return (
@@ -26,6 +28,16 @@ export function Credit() {
         className="underline decoration-1 underline-offset-2 transition-colors hover:text-foreground"
       >
         hectorolisan
+      </a>
+      <span aria-hidden>·</span>
+      <a
+        href="https://github.com/hectorolisan/ai-chat"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-1 rounded-md border px-1.5 py-0.5 transition-colors hover:bg-accent hover:text-foreground"
+      >
+        <CodeXml className="size-3" aria-hidden />
+        Código
       </a>
     </p>
   );
