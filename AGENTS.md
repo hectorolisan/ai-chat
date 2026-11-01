@@ -28,6 +28,10 @@ pnpm is the package manager (`pnpm-lock.yaml` is committed; npm/bun also work).
 - `pnpm lint` — ESLint (`eslint-config-next` core-web-vitals + typescript)
 - `pnpm test` — Vitest (`vitest run`; `vitest.config.mts` only maps the `@/` alias, default env is node)
 
+Deploy: `.github/workflows/deploy.yml` publishes `./out/` to GitHub Pages on every push to `main`
+(lint + test first). `basePath` comes from `PAGES_BASE_PATH` (`/ai-chat` in CI, empty locally), so
+never hardcode root-relative asset URLs.
+
 `pnpm-workspace.yaml` sets `minimumReleaseAge: 1440` (no package published less than a day ago)
 and blocks build scripts for `sharp` / `unrs-resolver` — keep both when adding dependencies.
 
